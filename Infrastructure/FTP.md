@@ -50,8 +50,18 @@ nmap -p 21 --script ftp-brute X.X.X.X
 ```
 
 ### FTP Bounce Attack
+
+#### nmap
 ```
 nmap -p 21 --script ftp-bounce <target>
+```
+
+#### Metasploit
+```
+use auxiliary/scanner/ftp/ftp_bounce
+set RHOSTS <FTP_server>
+set RPORT <FTP_port>
+run
 ```
 
 ### Upload Reverse Shell
