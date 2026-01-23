@@ -50,13 +50,11 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 #### Extensions Wordlist
 ```
 /opt/useful/seclists/Discovery/Web-Content/web-extensions.txt
-ExtensionsWordlist
 ```
 #### Domain Wordlist
 
 ```
 /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt
-Domain Wordlist
 ```
 
 #### Parameters Wordlist
