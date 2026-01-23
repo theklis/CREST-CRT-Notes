@@ -3,7 +3,7 @@
 ### Discovery
 ```
 nmap -p 21 [IP]
-nmap -p 21 --script=ftp-anon,ftp-bounce,ftp-syst,ftp-brute 
+nmap -p 21 --script=ftp-anon,ftp-bounce,ftp-syst,ftp-brute [IP]
 ```
 
 ### Banner Grabbing
