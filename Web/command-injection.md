@@ -147,3 +147,18 @@ ping -n 10 127.0.0.1   # Windows ping delay
 timeout 10             # Windows timeout command
 Start-Sleep -s 10      # PowerShell sleep
 ```
+
+## Automated Discovery
+
+### Using Nuclei
+
+```
+# Run command injection templates
+nuclei -u http://target.com -t cmd-injection/
+
+# Run with custom templates
+nuclei -u http://target.com -t custom-cmd.yaml
+
+# Severity based scanning
+nuclei -u http://target.com -t cmd-injection/ -severity critical,high
+```
