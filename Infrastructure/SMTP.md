@@ -1,4 +1,4 @@
-# Simple Network Management Protocol 
+# Simple Mail Transfer Protocol (SMTP) 
 
 ## Detection
 
@@ -235,3 +235,17 @@ find /var/mail/ -name "*.pdf" -o -name "*.doc" -o -name "*.xls"
 # Extract financial information
 grep -r -i "account\|routing\|ssn\|credit" /var/mail/
 ```
+
+## Common SMTP commands
+| Command    | Description        | Usage                          |
+|-----------|--------------------|--------------------------------|
+| HELO      | Identify client    | HELO client.com                |
+| EHLO      | Extended HELO      | EHLO client.com                |
+| MAIL FROM | Sender address     | MAIL FROM:<sender@domain.com>  |
+| RCPT TO   | Recipient          | RCPT TO:<recipient@domain.com> |
+| DATA      | Message content    | DATA                           |
+| VRFY      | Verify user        | VRFY admin                     |
+| EXPN      | Expand list        | EXPN all                       |
+| RSET      | Reset              | RSET                           |
+| NOOP      | No operation       | NOOP                           |
+| QUIT      | Close              | QUIT                           |
