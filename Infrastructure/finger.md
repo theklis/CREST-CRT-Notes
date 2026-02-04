@@ -54,7 +54,6 @@ finger
 finger kwstas
 ```
 
-
 #### Remote
 ```
 finger @10.10.10.10
