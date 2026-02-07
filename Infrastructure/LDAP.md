@@ -14,6 +14,11 @@ nmap -p 389 --script ldap-rootdse <IP> # pulls naming contexts and domain info
 nmap -p 389 --script ldap-search <IP> # search directory entries
 ```
 
+## Banner Grabbing
+```
+nc -vn target.com 389
+```
+
 ## Connect/Validate Bind
 
 ### Anonymous Bind
@@ -231,3 +236,14 @@ ldapmodify -x -H ldap://target.com -D "cn=admin,dc=example,dc=com" -w password -
 ldapdelete -x -H ldap://target.com -D "cn=admin,dc=example,dc=com" -w password "cn=user,ou=users,dc=example,dc=com"
 ```
 
+## Brute Force
+
+### Hydra
+```
+hydra -L users.txt -P passwords.txt <IP> ldap2 -s 389
+```
+
+### nmap
+```
+nmap -p 389 --script ldap-brute --script-args ldap.base='"DC=example,DC=local"' <IP>
+```
