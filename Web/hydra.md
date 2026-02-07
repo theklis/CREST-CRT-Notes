@@ -55,3 +55,8 @@ hydra -l user@target.com -P passwords.txt imap://target.com
 hydra -l user@target.com -P passwords.txt imaps://target.com:993
 hydra -L users.txt -P passwords.txt imap://target.com
 ```
+
+#### LDAP
+```
+hydra -L users.txt -P passwords.txt target.com ldap2 -s 389
+```
