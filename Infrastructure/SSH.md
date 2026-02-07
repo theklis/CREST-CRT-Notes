@@ -9,7 +9,9 @@ nmap -p 22 --script ssh2-enum-algos <IP>
 ## Connect
 ```
 ssh username@X.X.X.X
-ssh -i path/to/private_key user@target-ip
+
+chmod 600 id_rsa
+ssh -i path/to/id_rsa user@target-ip
 ```
 
 ## Banner Grabbing 
