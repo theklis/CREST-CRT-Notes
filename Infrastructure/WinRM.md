@@ -57,6 +57,11 @@ crackmapexec winrm <IP> -u users.txt -p 'Winter2024!'
 crackmapexec winrm target.com -u administrator -H '32ed87bdb5fdc5e9cba88547376818d4'
 ```
 
+### Execute Command
+```
+rackmapexec winrm <IP> -u <username> -p <password> -x "whoami
+```
+
 ## Remote Access 
 
 ### Evil-winrm
