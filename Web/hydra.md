@@ -60,3 +60,9 @@ hydra -L users.txt -P passwords.txt imap://target.com
 ```
 hydra -L users.txt -P passwords.txt target.com ldap2 -s 389
 ```
+
+#### MSSQL
+```
+hydra -L users.txt -P passwords.txt <IP> mssql
+hydra -l sa -P /usr/share/wordlists/rockyou.txt target.com mssql
+```
