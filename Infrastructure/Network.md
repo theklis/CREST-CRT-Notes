@@ -362,6 +362,17 @@ sudo ip route add 192.168.2.0/24 via 192.168.1.1 dev eth0
 sudo ip route add <destination_network> via <gateway_ip> dev <interface>
 ```
 
+### Connect to 172.16.1.1 via gateway 192.168.1.254
+```
+sudo ip route add 172.16.1.0/24 via 192.168.1.254
+# then try to curl to 172.16.1.1 to see if reachable
+```
+#### If already set up access to 172.16.1.1 above, then we can use that again to double pivot.
+#### For example, connect to 10.10.10.1 via 172.16.1.1
+```
+sudo ip route add 10.10.10.0/24 via 172.16.1.1
+```
+
 
 ## Service Identification 
 
